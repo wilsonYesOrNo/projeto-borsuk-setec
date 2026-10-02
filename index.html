@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>FPS Aim Trainer 3D</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="game"></canvas>
+<img id="akViewmodel" src="V_ak47.webp" alt="AK-47 em primeira pessoa">
+
+<div id="hud">
+  <div class="top">
+    <div class="brand">AIM TRAINER <b>3D</b></div>
+    <div class="stat"><small>PTS</small><strong id="score">0</strong></div>
+    <div class="timer" id="time">0:60</div>
+    <div class="stat"><small>ACC</small><strong id="acc">100%</strong></div>
+    <div class="stat"><small>HITS</small><strong id="hits">0</strong></div>
+  </div>
+
+  <div id="crosshair"><span></span><span></span><span></span><span></span><b></b></div>
+
+  <div class="weapon-hud">
+    <div id="weaponName">AK-47</div>
+    <strong id="ammo">30</strong><small>/ 90</small>
+  </div>
+
+  <div id="help">WASD andar · SHIFT correr · Mouse mirar · Clique atirar · ESPAÇO pausa · ESC libera</div>
+
+  <div id="menu">
+    <section>
+      <div class="eyebrow">FPS AIM TRAINER</div>
+      <h1 id="menuTitle">Treino 3D</h1>
+      <p id="menuText">Entre na arena e comece o treino. O jogo não depende do Pointer Lock para iniciar; ele é ativado depois do começo.</p>
+      <div class="grid">
+        <label>Dificuldade
+          <select id="difficulty">
+            <option value="easy">Fácil</option>
+            <option value="normal" selected>Normal</option>
+            <option value="hard">Difícil</option>
+            <option value="insane">Insano</option>
+          </select>
+        </label>
+        <label>Arma
+          <select id="weapon">
+            <option value="ak" selected>AK-47</option>
+            <option value="m4">M4A1-S</option>
+            <option value="glock">Glock</option>
+          </select>
+        </label>
+      </div>
+      <button id="play">ENTRAR NA PARTIDA</button>
+      <div id="error"></div>
+      <p class="micro">Mouse Y invertido: subir o mouse faz a câmera olhar para baixo.</p>
+    </section>
+  </div>
+
+  <div id="pause">
+    <section>
+      <div class="eyebrow">PAUSADO</div>
+      <h2>Treino em pausa</h2>
+      <button id="resume">CONTINUAR</button>
+    </section>
+  </div>
+</div>
+
+<script src="game.js"></script>
+</body>
+</html>
